@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment / secrets
+.env
+*.key
+*.pem
+
+# Benchmark outputs (large files)
+benchmark/results/*.parquet
+benchmark/results/*.csv
+benchmark/results/*.jsonl
+
+# Trained model artefacts
+router/models/
+*.pkl
+*.joblib
+*.json.gz
+
+# Logs & cache
+logs/
+cache/
+*.log
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp

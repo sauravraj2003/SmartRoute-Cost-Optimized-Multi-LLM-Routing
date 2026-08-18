@@ -1,0 +1,23 @@
+# Example standard API rates checked on 2026-10-25; recheck before production use.
+# Costs are USD per million tokens. Cached input, batch, regional and long-context
+# modifiers are not included in the generic estimator.
+effective_date: "2026-10-25"
+
+prices:
+  - model_id: "groq-gpt-oss-20b"
+    input: 0.075
+    output: 0.30
+    source: "https://console.groq.com/docs/models"
+    notes: "GPT-OSS 20B standard GroqCloud rates."
+
+  - model_id: "openai-gpt6-luna"
+    input: 0.05
+    output: 0.25
+    source: "https://developers.openai.com/api/docs/models/gpt-6-luna"
+    notes: "Short-context standard rates; longer prompts and processing tiers cost more."
+
+  - model_id: "anthropic-claude-opus-5-5"
+    input: 4.00
+    output: 20.00
+    source: "https://platform.claude.com/docs/en/models/opus-5-5/overview"
+    notes: "Standard Claude API token rates; caching and batch rates differ."

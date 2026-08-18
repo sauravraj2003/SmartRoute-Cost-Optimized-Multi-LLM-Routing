@@ -1,0 +1,37 @@
+# Example policy defaults. Tune thresholds and cost limits on validation data.
+default_mode: "balanced"
+
+modes:
+  cost_first:
+    success_threshold: 0.55
+    max_cost_usd: 0.005
+    max_escalations: 1
+    test_based_escalation: true
+    description: "Favor lower estimated cost, subject to the configured success threshold."
+
+  balanced:
+    success_threshold: 0.72
+    max_cost_usd: 0.015
+    max_escalations: 2
+    test_based_escalation: true
+    description: "Use the configured probability threshold and request cost ceiling."
+
+  quality_first:
+    success_threshold: 0.90
+    max_cost_usd: null
+    max_escalations: 2
+    test_based_escalation: true
+    description: "Require a higher predicted success probability; fall back to the highest configured tier."
+
+# Escalation follows increasing model tier. Keep this aligned with models.yaml.
+escalation_order: [1, 2, 3]
+
+# Optional. Models need measured typical_latency_ms.p95 values before enabling.
+latency_budget_ms: null
+
+features:
+  semantic_cache:
+    enabled: false
+    similarity_threshold: 0.96
+  otel_tracing: true
+  log_routing_decisions: true
