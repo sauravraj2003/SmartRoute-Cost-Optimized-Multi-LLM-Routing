@@ -48,3 +48,9 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# Local notes & conversation logs
+recovered_convo.md
+06_routewise.md
+*.tex
+

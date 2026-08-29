@@ -1,6 +1,6 @@
 # Tier is escalation/fallback rank, not a universal quality label. The policy
 # chooses by predicted success and estimated request cost within these tiers.
-pricing_date: "2026-10-25"
+pricing_date: "2026-08-20"
 
 models:
   - id: "openai-gpt6-luna"
