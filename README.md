@@ -1,4 +1,4 @@
-# RouteWise
+# SmartRoute
 ## Cost-Aware Multi-LLM Gateway for Coding Assistants
 
 > **Resume integrity note:** Provider prices change, benchmark results depend on the exact models and hardware, and the cost/quality numbers in your current resume draft are only targets until you run this project.
